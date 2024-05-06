@@ -46,7 +46,8 @@ jobs:
           # 私有服务器用户名
           username: ${{ secrets.USERNAME }}
           # 私有服务器用户密码
-          password: ${{ secrets.PASSWORD }}
+#          password: ${{ secrets.PASSWORD }}
+          private_key: ${{ secrets.PRIVATE_SSH_KEY }}
       # 部署运行
       - name: Deploy
         uses: appleboy/ssh-action@master
@@ -54,7 +55,8 @@ jobs:
           # 同上述
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+#          password: ${{ secrets.PASSWORD }}
+          private_key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: ${{ secrets.PORT }}
           # ssh进入系统后执行什么样的操作。一般是关闭原有的服务在重启
           script: |
