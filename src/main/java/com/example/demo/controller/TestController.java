@@ -19,7 +19,7 @@ public class TestController {
 
     @GetMapping("/user")
     public ResponseEntity<Object> getUser() {
-        User user = new User("liu", 500);
+        User user = new User("liu", 600);
         System.out.println(user.toString());
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
