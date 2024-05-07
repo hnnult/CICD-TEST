@@ -44,7 +44,7 @@ jobs:
           # 私有服务器公网IP地址
           host: ${{ secrets.HOST }}
           # 私有服务器用户名
-          # username: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USERNAME }}
           # 私有服务器用户密码
 #          password: ${{ secrets.PASSWORD }}
           privateKey: ${{ secrets.PRIVATE_SSH_KEY }}
